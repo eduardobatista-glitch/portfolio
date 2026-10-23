@@ -168,16 +168,23 @@ p strong {
 
 .nav-container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
   gap: 1.5rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-width: 0;
 }
 
 .nav-brand {
@@ -199,7 +206,7 @@ p strong {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 1.35rem;
+  gap: 1.15rem;
   flex-wrap: nowrap;
 }
 
@@ -991,6 +998,10 @@ p strong {
   .nav-container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .nav-left {
+    gap: 0;
   }
 
   .nav-menu {
