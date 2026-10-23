@@ -20,10 +20,16 @@ function initCommandPalette() {
     // Seções
     { id: 'nav-about', title: 'Sobre / Biografia', category: 'Navegação', icon: 'fa-user', action: () => scrollToSection('about') },
     { id: 'nav-cv', title: 'Trajetória & Formação', category: 'Navegação', icon: 'fa-timeline', action: () => scrollToSection('cv') },
+    { id: 'nav-awards', title: 'Prêmios & Reconhecimentos Acadêmicos', category: 'Navegação', icon: 'fa-award', action: () => scrollToSection('awards') },
     { id: 'nav-news', title: 'Notícias & Destaques', category: 'Navegação', icon: 'fa-newspaper', action: () => scrollToSection('news') },
     { id: 'nav-projects', title: 'Pesquisa & Projetos', category: 'Navegação', icon: 'fa-flask', action: () => scrollToSection('projects') },
     { id: 'nav-pubs', title: 'Publicações Selecionadas', category: 'Navegação', icon: 'fa-book-open', action: () => scrollToSection('publications') },
     { id: 'nav-skills', title: 'Habilidades & Idiomas', category: 'Navegação', icon: 'fa-code', action: () => scrollToSection('skills') },
+    
+    // Prêmios
+    { id: 'award-conic', title: 'Menção Honrosa no XX CONIC (IEAA/UFAM - 2026)', category: 'Prêmios', icon: 'fa-award', action: () => scrollToSection('awards') },
+    { id: 'award-conbraf', title: 'Melhor Trabalho (Menção Honrosa) no 54º CONBRAF', category: 'Prêmios', icon: 'fa-award', action: () => scrollToSection('awards') },
+    { id: 'award-workshop', title: 'Prêmio de Destaque no 2º Workshop de Agronomia (AgroConecta)', category: 'Prêmios', icon: 'fa-award', action: () => scrollToSection('awards') },
     
     // Projetos
     { id: 'proj-pesca', title: 'Monitoramento da Pesca no Médio Rio Madeira (TSBCAMP)', category: 'Pesquisa', icon: 'fa-fish', action: () => scrollToSection('projects') },
@@ -38,9 +44,10 @@ function initCommandPalette() {
     { id: 'pub-conbraf', title: 'Paper: Algoritmo Python em Fitopatologia (54º CONBRAF)', category: 'Publicações', icon: 'fa-leaf', action: () => scrollToSection('publications') },
 
     // Ações & Links
-    { id: 'soc-cv-pdf', title: 'Baixar Currículo em PDF', category: 'Documentos', icon: 'fa-file-pdf', action: () => window.open('assets/pdf/curriculo-lattes.pdf', '_blank') },
     { id: 'soc-lattes', title: 'Abrir Currículo Lattes CNPq', category: 'Perfis', icon: 'fa-graduation-cap', action: () => window.open('http://lattes.cnpq.br/7737132952831886', '_blank') },
     { id: 'soc-orcid', title: 'Abrir Perfil ORCID', category: 'Perfis', icon: 'fa-id-badge', action: () => window.open('https://orcid.org/0009-0006-4989-0894', '_blank') },
+    { id: 'soc-github', title: 'Abrir GitHub (eduardobatista-glitch)', category: 'Perfis', icon: 'fa-brands fa-github', action: () => window.open('https://github.com/eduardobatista-glitch', '_blank') },
+    { id: 'soc-scholar', title: 'Abrir Perfil Google Acadêmico (Scholar)', category: 'Perfis', icon: 'fa-book', action: () => window.open('https://scholar.google.com.br/citations?user=D_aGM8UAAAAJ&hl=pt-BR&oi=ao', '_blank') },
     { id: 'action-theme', title: 'Alternar Tema Claro / Escuro', category: 'Preferências', icon: 'fa-circle-half-stroke', action: () => document.getElementById('theme-toggle-btn')?.click() }
   ];
   

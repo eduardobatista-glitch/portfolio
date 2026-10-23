@@ -167,10 +167,17 @@ p strong {
 }
 
 .nav-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  gap: 1.5rem;
 }
 
 .nav-brand {
@@ -180,6 +187,8 @@ p strong {
   color: var(--text-primary);
   text-decoration: none !important;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-brand:hover {
@@ -190,15 +199,17 @@ p strong {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 1.25rem;
+  gap: 1.35rem;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.885rem;
   color: var(--text-muted);
   text-decoration: none !important;
   transition: color var(--t-fast);
-  padding: 0.2rem 0;
+  padding: 0.25rem 0;
+  white-space: nowrap;
   position: relative;
 }
 
@@ -220,14 +231,15 @@ p strong {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  flex-shrink: 0;
 }
 
 .search-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.65rem;
+  padding: 0.25rem 0.6rem;
   background: var(--bg-subtle);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
@@ -235,6 +247,7 @@ p strong {
   font-size: 0.775rem;
   cursor: pointer;
   transition: all var(--t-fast);
+  white-space: nowrap;
 }
 
 .search-pill:hover {
@@ -962,7 +975,24 @@ p strong {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1040px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.84rem;
+  }
+  .search-pill span {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .nav-menu {
     display: none;
   }
@@ -976,15 +1006,13 @@ p strong {
     background: var(--bg-body);
     border-bottom: 1px solid var(--border-light);
     flex-direction: column;
-    padding: 1rem 1.5rem;
-    gap: 0.75rem;
+    padding: 1.25rem 1.75rem;
+    gap: 0.9rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    z-index: 999;
   }
   
   .mobile-menu-btn {
     display: inline-flex;
-  }
-  
-  .search-pill span {
-    display: none;
   }
 }
